@@ -36,6 +36,9 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
+      - name: Create .env for CI
+        run: cp .env.example .env
+
       - name: Analyze
         run: flutter analyze
 
@@ -70,6 +73,9 @@ jobs:
 
       - name: Get dependencies
         run: flutter pub get
+
+      - name: Create .env for CI
+        run: cp .env.example .env
 
       - name: Build Web
         run: flutter build web --release

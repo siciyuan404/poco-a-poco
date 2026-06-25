@@ -36,6 +36,9 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
+      - name: Create .env for CI
+        run: cp .env.example .env
+
       - name: Verify formatting
         run: dart format --set-exit-if-changed .
 
